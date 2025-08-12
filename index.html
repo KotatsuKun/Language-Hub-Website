@@ -8,17 +8,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Language Hub - Your gateway to exploring languages and cultures from around the world.">
     <title>Language Hub</title>
 </head>
 
 <body>
-    <section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Language Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav
+                    ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#langs">Languages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+         
+    <section class="hero bg-primary text-white text-center">
+        <div class="container text-center mt-5">
+            <h1>What is Language Hub?</h1>
+            <p class="lead">Your gateway to exploring languages and cultures from around the world.</p>
+    </section>
+
+    <section class="bg-light text-dark langs">
         <div class="container mt-5">
-            <h1 class="text-center mb-4">What is this website about?</h1>
+            <h1 class="text-center mb-4">Languages</h1>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="" class="card-img-top" alt="English Language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/UK-US-CANADA-AUSTRALIA-NEW_ZEALAND_flags-fast.gif" class="card-img-top" alt="US/UK/Canada/Australia flag" style="height: 200px; object-fit: cover;" title="English flag" loading="lazy" data-license="By Original: த*உழவன்derivative work: Swarm (talk) - File:UK-US-CANADA-AUSTRALIA-NEW_ZEALAND_flags.gif, Public Domain, https://commons.wikimedia.org/w/index.php?curid=13624725">
                         <div class="card-body">
                             <h5 class="card-title">English Language</h5>
                             <p class="card-text">Explore the richness of the English language, its history, and its
@@ -30,7 +66,7 @@
 
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="" class="card-img-top" alt="Spanish Language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Spain_%282006_Winter_Olympics%29.svg/1920px-Flag_of_Spain_%282006_Winter_Olympics%29.svg.png" class="card-img-top" alt="Spain flag" style="height: 200px; object-fit: cover;" title="Spanish flag" loading="lazy" data-license="By International Olympics Committee - The 2006 Winter Olympics flag manual, CC0, https://commons.wikimedia.org/w/index.php?curid=164050789">
                         <div class="card-body">
                             <h5 class="card-title">Spanish Language</h5>
                             <p class="card-text">Dive into the vibrant world of the Spanish language, spoken by millions
@@ -42,7 +78,7 @@
 
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="" class="card-img-top" alt="French Language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1920px-Flag_of_France.svg.png" class="card-img-top" alt="French flag" style="height: 200px; object-fit: cover;" title="French flag" loading="lazy" data-license="By Original: Unknown Vector: SKopp - This SVG flag includes elements that have been taken or adapted from this flag:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=60739584">
                         <div class="card-body">
                             <h5 class="card-title">French Language</h5>
                             <p class="card-text">Uncover the elegance of the French language, known for its art, fashion,
@@ -52,10 +88,133 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1920px-Flag_of_South_Korea.svg.png" class="card-img-top" alt="Korean flag" style="height: 200px; object-fit: cover;" title="Korean flag" loading="lazy" data-license="By Original: Lee Eung-jun, Park Young-ho, and others Vector: Great Brightstar and others - Ordinance Act of the Law concerning the National Flag of the Republic of Korea, Construction and color guidelines (Russian/English)File:Flag of South Korea (construction sheet).svg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343752">>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Korean Language</h5>
+                            <p class="card-text">Explore the Korean language, known for its unique script and rich cultural heritage. Learn about its grammar, pronunciation, and the influence of K-pop and Korean dramas on global culture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/800px-Flag_of_the_People%27s_Republic_of_China.svg.png?20250417144606" class="card-img-top" alt="Chinese flag" style="height: 200px; object-fit: cover;" title="Chinese flag" loading="lazy" data-license="By Zeng Liansong - Own work, National Flag Image for Online Usage, National People's Congress of PRC, per Article 9 of the National Flag Law of PRC., Public Domain, https://commons.wikimedia.org/w/index.php?curid=436175">
+                        <div class="card-body">
+                            <h5 class="card-title">Mandarin Language</h5>
+                            <p class="card-text">Discover the complexities of the Mandarin language, the most spoken language in the world. Learn about its tones, characters, and the cultural nuances that shape communication in Chinese society.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/1920px-Flag_of_Hong_Kong.svg.png" class="card-img-top" alt="Hong Kong flag" style="height: 200px; object-fit: cover;" title="Hong Kong flag" loading="lazy" data-license="By Designed by Tao HoSVG code of 24 November 2005 version copied from Open Clip ArtSVG code of 20 August 2011 version by AlkariSVG code of 6 September 2021 version by Mike Rohsopht - Own work by Mike Rohsopht based on File:GB16689-2004.pdf and Regional Flag and Regional Emblem Ordinance, Public Domain, https://commons.wikimedia.org/w/index.php?curid=44636780">
+                        <div class="card-body">
+                            <h5 class="card-title">Cantonese Language</h5>
+                            <p class="card-text">Delve into the Cantonese language, known for its rich history and cultural significance in Hong Kong and southern China. Learn about its unique phonetics, vocabulary, and the role it plays in local identity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/1920px-Flag_of_Japan.svg.png" class="card-img-top" alt="Japanese flag" style="height: 200px; object-fit: cover;" title="Japanese flag" loading="lazy" data-license="By Various - Law Concerning the National Flag and Anthem (1999) (Japanese) (English); Ministry of Defense Defense Specification Z 8701C (DSPZ8701C) (archived)Construction sheet:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343621">
+                        <div class="card-body">
+                            <h5 class="card-title">Japanese Language</h5>
+                            <p class="card-text"> Explore the Japanese language, known for its intricate writing systems and cultural depth. Learn about its grammar, honorifics, and the influence of anime and manga on its global popularity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1920px-Flag_of_Indonesia.svg.png" class="card-img-top" alt="Indonesian flag" style="height: 200px; object-fit: cover;" title="Indonesian flag" loading="lazy" data-license="statute: Undang-Undang Republik Indonesia Nomor 24 Tahun 2009 tentang Bendera, Bahasa, dan Lambang Negara serta Lagu Kebangsaan (Law of the Republic of Indonesia Number 24 of 2009 on the Flag, Language, and Emblem of the State and the National Anthem) - Article 35, Public Domain, https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Indonesian Language</h5>
+                            <p class="card-text">Discover the Indonesian language, a unifying force in the diverse archipelago of Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1920px-Flag_of_Germany.svg.png" class="card-img-top" alt="German flag" style="height: 200px; object-fit: cover;" title="German flag" loading="lazy" data-license="By User:SKopp, User:Madden, and other users - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343071">
+                        <div class="card-body">
+                            <h5 class="card-title">German Language</h5>
+                            <p class="card-text">Explore the German language, known for its precision and rich literary tradition. Learn about its grammar, vocabulary, and the cultural context that shapes its use in Germany and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png" class="card-img-top" alt="Dutch flag" style="height: 200px; object-fit: cover;" title="Dutch flag" loading="lazy" data-license="By Zscout370 - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=363168">
+                        <div class="card-body">
+                            <h5 class="card-title">Dutch Language</h5>
+                            <p class="card-text">Discover the Dutch language, spoken in the Netherlands and Belgium. Learn about its unique features, grammar, and the cultural context that influences its use in Dutch-speaking regions.</p></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1920px-Flag_of_Brazil.svg.png" class="card-img-top" alt="Brazilian flag" style="height: 200px; object-fit: cover;" title="Brazilian flag" loading="lazy" data-license="By Raimundo Teixeira Mendes - SVG implementation of Lei n. 8.421 de 11 de maio de 1992. The official construction sheet can be found in the law's annex., Public Domain, https://commons.wikimedia.org/w/index.php?curid=361734">
+                        <div class="card-body">
+                            <h5 class="card-title">Brazilian Portuguese Language</h5>
+                            <p class="card-text">Explore the Brazilian Portuguese language, a variant of Portuguese spoken in Brazil. Learn about its unique pronunciation, vocabulary, and the cultural influences that shape its use in Brazilian society.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" class="card-img-top" alt="Russian flag" style="height: 200px; object-fit: cover;" title="Russian flag" loading="lazy" data-license="By Peter the Great - Государственный флаг Российской Федерации. Цвета флага: (Blue - Pantone 286 C, Red - Pantone 485 C) взяты из [1][2][3][4], Public Domain, https://commons.wikimedia.org/w/index.php?curid=9450374">
+                        <div class="card-body">
+                            <h5 class="card-title">Russian Language</h5>
+                            <p class="card-text">Discover the Russian language, known for its rich literary tradition and complex grammar. Learn about its Cyrillic script, phonetics, and the cultural context that shapes communication in Russian-speaking regions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1920px-Flag_of_Vietnam.svg.png" class="card-img-top" alt="Vietnamese flag" style="height: 200px; object-fit: cover;" title="Vietnamese flag" loading="lazy" data-license="By See File history below for details. - https://www.fotw.info/flags/vn.html (Construction sheet)Chính phủ Việt Nam / 政府越南 / Gouvernement du Viêt Nam / Government of Vietnam, Public Domain, https://commons.wikimedia.org/w/index.php?curid=383863">
+                        <div class="card-body">
+                            <h5 class="card-title">Vietnamese Language</h5>
+                            <p class="card-text">Explore the Vietnamese language, known for its tonal nature and unique script. Learn about its grammar, pronunciation, and the cultural influences that shape communication in Vietnam.</p>
+                        </div>
+                    </div>
+                </div>
         
                     
             </div>
     </section>
+
+    <section class="about bg-light text-dark About-us">
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">About Us</h1>
+            <p class="text-center">Language Hub is dedicated to promoting language learning and cultural exchange. Our mission is to provide resources and support for language learners worldwide.</p>
+        </div>
+    </section>
+
+    <section class="contact bg-light text-dark contact">
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Contact Us</h1>
+            <p class="text-center">For inquiries, please email us at <a href="#"></a></p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container text-center py-4">
+            <p class="text-muted">&copy; 2023 Language Hub. All rights reserved.</p>
+            <p class="text-muted">Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
 
 </body>
 
