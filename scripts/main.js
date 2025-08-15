@@ -1,26 +1,18 @@
-const darkModeToggle = document.getElementById('darkModeToggle');
 
-// Initialize checkbox state based on current theme
-darkModeToggle.checked = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+window.addEventListener('DOMContentLoaded', function() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const storedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-bs-theme', storedTheme);
 
-// Add event listener for changes
-darkModeToggle.addEventListener('change', () => {
-    const newTheme = darkModeToggle.checked ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-bs-theme', newTheme);
+    if (darkModeToggle) {
+        darkModeToggle.checked = storedTheme === 'dark';
+        darkModeToggle.addEventListener('change', function() {
+            const newTheme = darkModeToggle.checked ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
 });
-
-const currentTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.setAttribute('data-bs-theme', currentTheme);
-darkModeToggle.checked = currentTheme === 'dark';
-
-// Event listener
-darkModeToggle.addEventListener('change', () => {
-    const newTheme = darkModeToggle.checked ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-bs-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
-
-
 
 // Enhanced Safari detection
 function isSafariBrowser() {
