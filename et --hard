@@ -1,0 +1,506 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 732c05b..9046a1f 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -14,7 +14,7 @@[m
+     <link rel="icon" href="favicon.ico" type="image/x-icon">[m
+     <meta name="description"[m
+         content="Language Hub - Your gateway to exploring languages and cultures from around the world.">[m
+[31m-    <title>Language Hub</title>[m
+[32m+[m[32m    <title data-i18n="page_name_index">Language Hub</title>[m[41m[m
+ </head>[m
+ [m
+ <body>[m
+[36m@@ -22,7 +22,7 @@[m
+     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: var(--k-custom-body-bg) ;">[m
+         <div class="container-fluid">[m
+ [m
+[31m-            <a class="navbar-brand text-center">[m
+[32m+[m[32m            <a class="navbar-brand text-center" data-i18n="Logo_name">[m[41m[m
+                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"[m
+                     class="bi bi-globe-americas" viewBox="0 0 16 16">[m
+                     <path[m
+[36m@@ -38,20 +38,39 @@[m
+                     ms-auto">[m
+                     <li class="nav-item nav-link">[m
+                         <div class="form-switch">[m
+[31m-                          <input class="form-check-input" type="checkbox" id="darkModeToggle">Dark Mode</input>[m
+[32m+[m[32m                          <input class="form-check-input" type="checkbox" id="darkModeToggle" data-i18n="dark_mode">Dark Mode</input>[m[41m[m
+                         </div>[m
+                     </li>[m
+ [m
+[32m+[m[32m                    <li>[m[41m[m
+[32m+[m[32m                         <div class="dropdown d-inline-block">[m[41m[m
+[32m+[m[32m                        <button class="language-bg dropdown-toggle hover-item" type="button" id="languageDropdown"[m[41m[m
+[32m+[m[32m                            data-bs-toggle="dropdown" aria-expanded="false">[m[41m[m
+[32m+[m[32m                            <i class="bi bi-translate me-1"></i>[m[41m[m
+[32m+[m[32m                            <span id="currentLanguage">English</span>[m[41m[m
+[32m+[m[32m                        </button>[m[41m[m
+[32m+[m[32m                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="pt-br">Português</a></li>[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="fr">Français</a></li>[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="de">Deutsch</a></li>[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="id">Indonesia</a></li>[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="jp">日本語</a></li>[m[41m[m
+[32m+[m[32m                            <li><a class="dropdown-item language-option" href="#" data-lang="zh">中文</a></li>[m[41m[m
+[32m+[m[32m                        </ul>[m[41m[m
+[32m+[m[32m                    </div>[m[41m[m
+[32m+[m[32m                    </li>[m[41m[m
+[32m+[m[41m[m
+                     <li class="nav-item">[m
+[31m-                        <a class="nav-link" href="#langs">Languages</a>[m
+[32m+[m[32m                        <a class="nav-link" href="#langs" data-i18n="langs">Languages</a>[m[41m[m
+                     </li>[m
+ [m
+                     <li class="nav-item">[m
+[31m-                        <a class="nav-link" href="#about">About Us</a>[m
+[32m+[m[32m                        <a class="nav-link" href="#about" data-i18n="about">About Us</a>[m[41m[m
+                     </li>[m
+ [m
+                     <li class="nav-item">[m
+[31m-                        <a class="nav-link" href="#contact">Contact</a>[m
+[32m+[m[32m                        <a class="nav-link" href="#contact" data-i18n="contact">Contact</a>[m[41m[m
+                     </li>[m
+                 </ul>[m
+             </div>[m
+[36m@@ -60,14 +79,14 @@[m
+ [m
+     <header class="bg-primary text-white text-center py-5">[m
+         <div class="container">[m
+[31m-            <h1>Welcome to Language Hub</h1>[m
+[31m-            <p class="lead">Explore languages and cultures from around the world.</p>[m
+[32m+[m[32m            <h1 data-i18n="welcom_index">Welcome to Language Hub</h1>[m[41m[m
+[32m+[m[32m            <p class="lead" data-i18n="welcome_desc">Explore languages and cultures from around the world.</p>[m[41m[m
+         </div>[m
+     </header>[m
+ [m
+     <section class="langs" id="langs">[m
+         <div class="container mt-5">[m
+[31m-            <h1 class="text-center mb-4">Languages</h1>[m
+[32m+[m[32m            <h1 class="text-center mb-4" data-i18n="langs">Languages</h1>[m[41m[m
+             <div class="row">[m
+                 <div class="col-md-4">[m
+                     <div class="card mb-4 item1">[m
+[36m@@ -76,8 +95,8 @@[m
+                             style="height: 200px; object-fit: cover;" title="English flag" loading="lazy"[m
+                             data-license="By Original: த*உழவன்derivative work: Swarm (talk) - File:UK-US-CANADA-AUSTRALIA-NEW_ZEALAND_flags.gif, Public Domain, https://commons.wikimedia.org/w/index.php?curid=13624725">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">English Language</h5>[m
+[31m-                            <p class="card-text">Explore the richness of the English language, its history, and its[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="english">English Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="en_desc">Explore the richness of the English language, its history, and its[m[41m[m
+                                 global influence. Learn about its grammar, vocabulary, and the nuances that make it[m
+                                 unique.</p>[m
+                             <a class="stretched-link" href="pages/EN_page.html"></a>[m
+[36m@@ -92,8 +111,8 @@[m
+                             title="Spanish flag" loading="lazy"[m
+                             data-license="By International Olympics Committee - The 2006 Winter Olympics flag manual, CC0, https://commons.wikimedia.org/w/index.php?curid=164050789">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Spanish Language</h5>[m
+[31m-                            <p class="card-text">Dive into the vibrant world of the Spanish language, spoken by millions[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="spanish">Spanish Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="es_desc">Dive into the vibrant world of the Spanish language, spoken by millions[m[41m[m
+                                 worldwide. Discover its cultural significance, diverse dialects, and the beauty of its[m
+                                 literature.</p>[m
+                             <a class="stretched-link" href="pages/ES_page.html"></a>[m
+[36m@@ -108,8 +127,8 @@[m
+                             title="French flag" loading="lazy"[m
+                             data-license="By Original: Unknown Vector: SKopp - This SVG flag includes elements that have been taken or adapted from this flag:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=60739584">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">French Language</h5>[m
+[31m-                            <p class="card-text">Uncover the elegance of the French language, known for its art,[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="french">French Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="fr_desc">Uncover the elegance of the French language, known for its art,[m[41m[m
+                                 fashion,[m
+                                 and cuisine. Learn about its grammar, pronunciation, and the cultural context that[m
+                                 shapes[m
+[36m@@ -128,8 +147,8 @@[m
+                             data-license="By Original: Lee Eung-jun, Park Young-ho, and others Vector: Great Brightstar and others - Ordinance Act of the Law concerning the National Flag of the Republic of Korea, Construction and color guidelines (Russian/English)File:Flag of South Korea (construction sheet).svg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343752">>[m
+ [m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Korean Language</h5>[m
+[31m-                            <p class="card-text"> Explore the Korean language, known for its unique script and rich[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="korean">Korean Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="kr_desc"> Explore the Korean language, known for its unique script and rich[m[41m[m
+                                 cultural heritage. Learn about its grammar, pronunciation, and the influence of K-pop[m
+                                 and Korean dramas on global culture.</p>[m
+                             <a class="stretched-link" href="pages/KR_page.html"></a>[m
+[36m@@ -144,8 +163,8 @@[m
+                             title="Chinese flag" loading="lazy"[m
+                             data-license="By Zeng Liansong - Own work, National Flag Image for Online Usage, National People's Congress of PRC, per Article 9 of the National Flag Law of PRC., Public Domain, https://commons.wikimedia.org/w/index.php?curid=436175">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Mandarin Language</h5>[m
+[31m-                            <p class="card-text">Discover the complexities of the Mandarin language, the most spoken[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="mandarin">Mandarin Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="zh_desc">Discover the complexities of the Mandarin language, the most spoken[m[41m[m
+                                 language in the world. Learn about its tones, characters, and the cultural nuances that[m
+                                 shape communication in Chinese society.</p>[m
+                             <a class="stretched-link" href="pages/ZH_page.html"></a>[m
+[36m@@ -160,8 +179,8 @@[m
+                             title="Hong Kong flag" loading="lazy"[m
+                             data-license="By Designed by Tao HoSVG code of 24 November 2005 version copied from Open Clip ArtSVG code of 20 August 2011 version by AlkariSVG code of 6 September 2021 version by Mike Rohsopht - Own work by Mike Rohsopht based on File:GB16689-2004.pdf and Regional Flag and Regional Emblem Ordinance, Public Domain, https://commons.wikimedia.org/w/index.php?curid=44636780">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Cantonese Language</h5>[m
+[31m-                            <p class="card-text">Delve into the Cantonese language, known for its rich history and[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="canto">Cantonese Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="zh-yue_desc">Delve into the Cantonese language, known for its rich history and[m[41m[m
+                                 cultural significance in Hong Kong and southern China. Learn about its unique phonetics,[m
+                                 vocabulary, and the role it plays in local identity.</p>[m
+                             <a class="stretched-link" href="pages/ZH-Yue_page.html"></a>[m
+[36m@@ -176,8 +195,8 @@[m
+                             title="Japanese flag" loading="lazy"[m
+                             data-license="By Various - Law Concerning the National Flag and Anthem (1999) (Japanese) (English); Ministry of Defense Defense Specification Z 8701C (DSPZ8701C) (archived)Construction sheet:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343621">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Japanese Language</h5>[m
+[31m-                            <p class="card-text"> Explore the Japanese language, known for its intricate writing systems[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="japanese">Japanese Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="jp_desc"> Explore the Japanese language, known for its intricate writing systems[m[41m[m
+                                 and cultural depth. Learn about its grammar, honorifics, and the influence of anime and[m
+                                 manga on its global popularity.</p>[m
+                             <a class="stretched-link" href="pages/JP_page.html"></a>[m
+[36m@@ -193,8 +212,8 @@[m
+                             data-license="statute: Undang-Undang Republik Indonesia Nomor 24 Tahun 2009 tentang Bendera, Bahasa, dan Lambang Negara serta Lagu Kebangsaan (Law of the Republic of Indonesia Number 24 of 2009 on the Flag, Language, and Emblem of the State and the National Anthem) - Article 35, Public Domain, https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg">[m
+ [m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Indonesian Language</h5>[m
+[31m-                            <p class="card-text">Discover the Indonesian language, a unifying force in the diverse[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="indo">Indonesian Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="id_desc">Discover the Indonesian language, a unifying force in the diverse[m[41m[m
+                                 archipelago of Indonesia.</p>[m
+                             <a class="stretched-link" href="pages/ID_page.html"></a>[m
+                         </div>[m
+[36m@@ -208,8 +227,8 @@[m
+                             title="German flag" loading="lazy"[m
+                             data-license="By User:SKopp, User:Madden, and other users - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343071">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">German Language</h5>[m
+[31m-                            <p class="card-text">Explore the German language, known for its precision and rich literary[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="german">German Language</h5>[m[41m[m
+[32m+[m[32m                            <p class="card-text" data-i18n="de_desc">Explore the German language, known for its precision and rich literary[m[41m[m
+                                 tradition. Learn about its grammar, vocabulary, and the cultural context that shapes its[m
+                                 use in Germany and beyond.</p>[m
+                             <a class="stretched-link" href="pages/DE_page.html"></a>[m
+[36m@@ -224,7 +243,7 @@[m
+                             title="Dutch flag" loading="lazy"[m
+                             data-license="By Zscout370 - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=363168">[m
+                         <div class="card-body">[m
+[31m-                            <h5 class="card-title">Dutch Language</h5>[m
+[32m+[m[32m                            <h5 class="card-title" data-i18n="dutch">Dutch Language</h5>[m[41m[m
+                             <p class="card-text">Discover the Dutch language, spoken in the Netherlands and Belgium.[m
+                                 Learn about its unique features, grammar, and the cultural context that influences its[m
+                                 use in Dutch-speaking regions.</p>[m
+[36m@@ -309,6 +328,7 @@[m
+         </div>[m
+     </footer>[m
+     <script src="/scripts/main.js"></script>[m
+[32m+[m[32m    <script src="/scripts/language_changer.js"></script>[m[41m[m
+ </body>[m
+ [m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/ES_page.html b/pages/ES_page.html[m
+[1mindex 0e39c4a..b51a623 100644[m
+[1m--- a/pages/ES_page.html[m
+[1m+++ b/pages/ES_page.html[m
+[36m@@ -1,10 +1,105 @@[m
+[31m-<html lang="en">[m
+[32m+[m[32m<html lang="en" data-bs-theme="light">[m
+[32m+[m
+ <head>[m
+     <meta charset="UTF-8">[m
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[31m-    <title>Document</title>[m
+[32m+[m[32m    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"[m
+[32m+[m[32m        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">[m
+[32m+[m[32m    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"[m
+[32m+[m[32m        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"[m
+[32m+[m[32m        crossorigin="anonymous"></script>[m
+[32m+[m[32m    <link rel="stylesheet" href="../style.css">[m
+[32m+[m[32m    <title>Spanish Language</title>[m
+ </head>[m
+[32m+[m
+ <body>[m
+[31m-    <h1>Under construction</h1>[m
+[32m+[m[32m    <nav class="navbar navbar-expand-lg">[m
+[32m+[m[32m        <div class="container-fluid">[m
+[32m+[m
+[32m+[m[32m            <a class="navbar-brand" href="#">Language Hub</a>[m
+[32m+[m[32m            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"[m
+[32m+[m[32m                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">[m
+[32m+[m[32m                <span class="navbar-toggler-icon"></span>[m
+[32m+[m[32m            </button>[m
+[32m+[m[32m            <div class="collapse navbar-collapse" id="navbarNav">[m
+[32m+[m[32m                <ul class="navbar-nav[m
+[32m+[m[32m                    ms-auto">[m
+[32m+[m[32m                    <li class="nav-item">[m
+[32m+[m[32m                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>[m
+[32m+[m[32m                    </li>[m
+[32m+[m[32m                </ul>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </nav>[m
+[32m+[m
+[32m+[m[32m    <header class="bg-primary text-white text-center py-5">[m
+[32m+[m[32m        <div class="container">[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Spain_%282006_Winter_Olympics%29.svg/1920px-Flag_of_Spain_%282006_Winter_Olympics%29.svg.png"[m
+[32m+[m[32m                alt="Spain Flag" class="mb-4 img-fluid" style="width: 500px; height: auto;"[m
+[32m+[m[32m                data-license="By International Olympics Committee - The 2006 Winter Olympics flag manual, CC0, https://commons.wikimedia.org/w/index.php?curid=164050789">[m
+[32m+[m[32m            <h1>Welcome to the Spanish Language Page</h1>[m
+[32m+[m[32m            <p class="lead">Discover the beauty and complexity of the Spanish language.</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </header>[m
+[32m+[m
+[32m+[m[32m    <section class="container mt-5">[m
+[32m+[m[32m        <h1 class="text-center">Spanish Language</h1>[m
+[32m+[m[32m        <p class="lead text-center">Exploring the rich history and cultural significance of the Spanish language.</p>[m
+[32m+[m[32m        </p>[m
+[32m+[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Spain_map.svg/1280px-Spain_map.svg.png"[m
+[32m+[m[32m                alt="Map of spain" class="img-fluid" style="width: 200px; height: auto;"[m
+[32m+[m[32m                data-license="By Peter Fitzgerald - Own work based on Comunitats_autònomes_d'Espanya.svg by Joan M. Borràs, and the Perry-Castañeda Library Map Collection - University of Texas Libraries, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=22747962">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">History of Spanish</h5>[m
+[32m+[m[32m                <p class="card-text">The Spanish language has evolved over centuries, influenced by various cultures and[m
+[32m+[m[32m                    languages. From its roots in Latin to its current form, it reflects the history of Spain and Latin[m
+[32m+[m[32m                    America.</p>[m
+[32m+[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">Cultural Significance</h5>[m
+[32m+[m[32m                <p class="card-text">English is not just a language; it's a global phenomenon. It serves as a lingua[m
+[32m+[m[32m                    franca in many parts of the world, facilitating communication across cultures. Its literature,[m
+[32m+[m[32m                    music, and media have had a profound impact on global culture.</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag-map_of_the_world_Inkscape.png/1920px-Flag-map_of_the_world_Inkscape.png"[m
+[32m+[m[32m                alt="UK Flag" class="img-fluid" style="width: 400px; height: auto;"[m
+[32m+[m[32m                data-license="By Allice Hunter - Empty map: File:World map (Miller cylindrical projection, blank).svgEF English Proficiency Index Ranking: EF EPI 2024 - EF English Proficiency Index (2024)., CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=157844613">[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Studying_and_writing.jpg/1920px-Studying_and_writing.jpg"[m
+[32m+[m[32m                alt="UK Flag" class="img-fluid" style="width: 400px; height: auto;"[m
+[32m+[m[32m                data-license="By Kwameghana(Bright Kwame Ayisi) - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=149691146">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">Learning Resources</h5>[m
+[32m+[m[32m                <p class="card-text">Whether you're a native speaker or learning English as a second language, there are[m
+[32m+[m[32m                    abundant resources available. From online courses to language exchange programs, the opportunities[m
+[32m+[m[32m                    to improve your English skills are vast.</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">Join the Community</h5>[m
+[32m+[m[32m                <p class="card-text">Connect with fellow language enthusiasts! Join our forums, participate in[m
+[32m+[m[32m                    discussions, and share your experiences with the English language. Whether you're a learner or a[m
+[32m+[m[32m                    fluent speaker, there's a place for you in our community.</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m[32m    <footer>[m
+[32m+[m[32m        <div class="container text-center py-4">[m
+[32m+[m[32m            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>[m
+[32m+[m[32m            <!-- <p class="text-muted">Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p> -->[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </footer>[m
+[32m+[m[32m    <script src="../scripts/main.js"></script>[m
+ </body>[m
+[32m+[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/ZH_page.html b/pages/ZH_page.html[m
+[1mindex 0e39c4a..2f056a6 100644[m
+[1m--- a/pages/ZH_page.html[m
+[1m+++ b/pages/ZH_page.html[m
+[36m@@ -1,10 +1,86 @@[m
+[31m-<html lang="en">[m
+[32m+[m[32m<html lang="en" data-bs-theme="light">[m
+ <head>[m
+     <meta charset="UTF-8">[m
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[31m-    <title>Document</title>[m
+[32m+[m[32m     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"[m
+[32m+[m[32m        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">[m
+[32m+[m[32m    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"[m
+[32m+[m[32m        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"[m
+[32m+[m[32m        crossorigin="anonymous"></script>[m
+[32m+[m[32m    <link rel="stylesheet" href="../style.css">[m
+[32m+[m[32m    <title>Mandarin Language</title>[m
+ </head>[m
+[32m+[m
+ <body>[m
+[31m-    <h1>Under construction</h1>[m
+[32m+[m[32m    <nav class="navbar navbar-expand-lg">[m
+[32m+[m[32m        <div class="container-fluid">[m
+[32m+[m[41m            [m
+[32m+[m[32m            <a class="navbar-brand" href="#" >Language Hub</a>[m
+[32m+[m[32m            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"[m
+[32m+[m[32m                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">[m
+[32m+[m[32m                <span class="navbar-toggler-icon"></span>[m
+[32m+[m[32m            </button>[m
+[32m+[m[32m            <div class="collapse navbar-collapse" id="navbarNav">[m
+[32m+[m[32m                <ul class="navbar-nav[m
+[32m+[m[32m                    ms-auto">[m
+[32m+[m[32m                    <li class="nav-item">[m
+[32m+[m[32m                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>[m
+[32m+[m[32m                    </li>[m
+[32m+[m[32m                </ul>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </nav>[m
+[32m+[m
+[32m+[m[32m    <header class="bg-primary text-white text-center py-5">[m
+[32m+[m[32m        <div class="container">[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/UK-US-CANADA-AUSTRALIA-NEW_ZEALAND_flags-fast.gif" alt="English Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">[m
+[32m+[m[32m            <h1>Welcome to the Mandarin Language Page</h1>[m
+[32m+[m[32m            <p class="lead">Discover the beauty and complexity of the mandarin language.</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </header>[m
+[32m+[m
+[32m+[m[32m    <section class="container mt-5">[m
+[32m+[m[32m        <h1 class="text-center">Mandarin Language</h1>[m
+[32m+[m[32m        <p class="lead text-center">Exploring the rich history and cultural significance of the English language.</p>[m
+[32m+[m[41m       [m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/British_Isles_%281909%29.jpg/800px-British_Isles_%281909%29.jpg" alt="UK Flag" class="img-fluid" style="width: 200px; height: auto;" data-license="By C.S. Hammond & Company [2] - Hammond's Handy atlas of the World, p. 71 [1], Public Domain, https://commons.wikimedia.org/w/index.php?curid=82164504">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">History of English</h5>[m
+[32m+[m[32m                <p class="card-text">The English language has evolved over centuries, influenced by various cultures and languages. From Old English to Modern English, it reflects the history of the British Isles and the wider world. </p>[m
+[32m+[m[41m                [m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">Cultural Significance</h5>[m
+[32m+[m[32m                <p class="card-text">English is not just a language; it's a global phenomenon. It serves as a lingua franca in many parts of the world, facilitating communication across cultures. Its literature, music, and media have had a profound impact on global culture.</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag-map_of_the_world_Inkscape.png/1920px-Flag-map_of_the_world_Inkscape.png" alt="UK Flag" class="img-fluid" style="width: 400px; height: auto;" data-license="By Allice Hunter - Empty map: File:World map (Miller cylindrical projection, blank).svgEF English Proficiency Index Ranking: EF EPI 2024 - EF English Proficiency Index (2024)., CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=157844613">[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Studying_and_writing.jpg/1920px-Studying_and_writing.jpg" alt="UK Flag" class="img-fluid" style="width: 400px; height: auto;" data-license="By Kwameghana(Bright Kwame Ayisi) - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=149691146">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">Learning Resources</h5>[m
+[32m+[m[32m                <p class="card-text">Whether you're a native speaker or learning English as a second language, there are abundant resources available. From online courses to language exchange programs, the opportunities to improve your English skills are vast.</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="card mb-3 d-flex flex-row align-items-center">[m
+[32m+[m[32m            <div class="card-body">[m
+[32m+[m[32m                <h5 class="card-title">Join the Community</h5>[m
+[32m+[m[32m                <p class="card-text">Connect with fellow language enthusiasts! Join our forums, participate in discussions, and share your experiences with the English language. Whether you're a learner or a fluent speaker, there's a place for you in our community.</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </section>[m
+[32m+[m[41m    [m
+[32m+[m[32m    <footer>[m
+[32m+[m[32m        <div class="container text-center py-4">[m
+[32m+[m[32m            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>[m
+[32m+[m[32m            <!-- <p class="text-muted">Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p> -->[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </footer>[m
+[32m+[m[32m    <script src="../scripts/main.js"></script>[m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/scripts/language_changer.js b/scripts/language_changer.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cb9e03b[m
+[1m--- /dev/null[m
+[1m+++ b/scripts/language_changer.js[m
+[36m@@ -0,0 +1,86 @@[m
+[32m+[m[32m// Translation cache[m
+[32m+[m[32mlet translations = {};[m
+[32m+[m
+[32m+[m[32mdocument.addEventListener('DOMContentLoaded', function() {[m
+[32m+[m[32m  // Initialize with saved language or browser preference[m
+[32m+[m[32m  const defaultLang = navigator.language.split('-')[0] || 'en';[m
+[32m+[m[32m  const savedLang = localStorage.getItem('siteLanguage') || defaultLang;[m
+[32m+[m[41m  [m
+[32m+[m[32m  // Wait a brief moment to ensure all elements are loaded[m
+[32m+[m[32m  setTimeout(() => changeLanguage(savedLang), 50);[m
+[32m+[m[41m  [m
+[32m+[m[32m  // Dropdown event listeners[m
+[32m+[m[32m  document.querySelectorAll('.language-option').forEach(option => {[m
+[32m+[m[32m    option.addEventListener('click', function(e) {[m
+[32m+[m[32m      e.preventDefault();[m
+[32m+[m[32m      const lang = this.getAttribute('data-lang');[m
+[32m+[m[32m      changeLanguage(lang);[m
+[32m+[m[32m    });[m
+[32m+[m[32m  });[m
+[32m+[m[32m});[m
+[32m+[m
+[32m+[m[32masync function changeLanguage(lang) {[m
+[32m+[m[32m  try {[m
+[32m+[m[32m    // Only load if not cached or if we need to force reload[m
+[32m+[m[32m    if (!translations[lang]) {[m
+[32m+[m[32m      const response = await fetch(`translations/${lang}.json`);[m
+[32m+[m[32m      if (!response.ok) throw new Error('Translation not found');[m
+[32m+[m[32m      translations[lang] = await response.json();[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Apply translations safely[m
+[32m+[m[32m    safeApplyTranslations(translations[lang]);[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Update UI elements if they exist[m
+[32m+[m[32m    const languageDisplay = document.getElementById('currentLanguage');[m
+[32m+[m[32m    if (languageDisplay) {[m
+[32m+[m[32m      languageDisplay.textContent = translations[lang]['language_name'];[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Save preference[m
+[32m+[m[32m    localStorage.setItem('siteLanguage', lang);[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Update HTML lang attribute[m
+[32m+[m[32m    document.documentElement.lang = lang;[m
+[32m+[m[41m    [m
+[32m+[m[32m  } catch (error) {[m
+[32m+[m[32m    console.error('Error loading translations:', error);[m
+[32m+[m[32m    // Fallback to English if preferred language fails[m
+[32m+[m[32m    if (lang !== 'en') changeLanguage('en');[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction safeApplyTranslations(translation) {[m
+[32m+[m[32m  // Safely update all elements with data-i18n attribute[m
+[32m+[m[32m  document.querySelectorAll('[data-i18n]').forEach(element => {[m
+[32m+[m[32m    const key = element.getAttribute('data-i18n');[m
+[32m+[m[32m    if (translation[key]) {[m
+[32m+[m[32m      try {[m
+[32m+[m[32m        element.textContent = translation[key];[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (element.placeholder) {[m
+[32m+[m[32m          element.placeholder = translation[key];[m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (element.alt) {[m
+[32m+[m[32m          element.alt = translation[key];[m
+[32m+[m[32m        }[m
+[32m+[m[32m      } catch (e) {[m
+[32m+[m[32m        console.warn(`Failed to update element for key ${key}`, e);[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m[32m  });[m
+[32m+[m[41m  [m
+[32m+[m[32m  // Update title if needed[m
+[32m+[m[32m  if (translation['page_title']) {[m
+[32m+[m[32m    document.title = translation['page_title'];[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m// Ensure language persists across page loads[m
+[32m+[m[32mwindow.addEventListener('beforeunload', function() {[m
+[32m+[m[32m  if (localStorage.getItem('siteLanguage')) {[m
+[32m+[m[32m    // Small delay to ensure language is saved before navigation[m
+[32m+[m[32m    setTimeout(() => {}, 10);[m
+[32m+[m[32m  }[m
+[32m+[m[32m});[m
+\ No newline at end of file[m
+[1mdiff --git a/translations/en.json b/translations/en.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
