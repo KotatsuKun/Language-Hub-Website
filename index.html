@@ -14,7 +14,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="description"
         content="Language Hub - Your gateway to exploring languages and cultures from around the world.">
-    <title>Language Hub</title>
+    <title data-i18n="page_name_index">Language Hub</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: var(--k-custom-body-bg) ;">
         <div class="container-fluid">
 
-            <a class="navbar-brand text-center">
+            <a class="navbar-brand text-center" data-i18n="Logo_name">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                     class="bi bi-globe-americas" viewBox="0 0 16 16">
                     <path
@@ -38,20 +38,39 @@
                     ms-auto">
                     <li class="nav-item nav-link">
                         <div class="form-switch">
-                          <input class="form-check-input" type="checkbox" id="darkModeToggle">Dark Mode</input>
+                          <input class="form-check-input" type="checkbox" id="darkModeToggle" data-i18n="dark_mode">Dark Mode</input>
                         </div>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#langs">Languages</a>
+                    <li>
+                         <div class="dropdown d-inline-block">
+                        <button class="language-bg dropdown-toggle hover-item" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-translate me-1"></i>
+                            <span id="currentLanguage">English</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item language-option" href="#" data-lang="pt-br">Português</a></li>
+                            <li><a class="dropdown-item language-option" href="#" data-lang="fr">Français</a></li>
+                            <li><a class="dropdown-item language-option" href="#" data-lang="de">Deutsch</a></li>
+                            <li><a class="dropdown-item language-option" href="#" data-lang="id">Indonesia</a></li>
+                            <li><a class="dropdown-item language-option" href="#" data-lang="jp">日本語</a></li>
+                            <li><a class="dropdown-item language-option" href="#" data-lang="zh">中文</a></li>
+                        </ul>
+                    </div>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
+                        <a class="nav-link" href="#langs" data-i18n="langs">Languages</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#about" data-i18n="about">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-i18n="contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -60,14 +79,14 @@
 
     <header class="bg-primary text-white text-center py-5">
         <div class="container">
-            <h1>Welcome to Language Hub</h1>
-            <p class="lead">Explore languages and cultures from around the world.</p>
+            <h1 data-i18n="welcom_index">Welcome to Language Hub</h1>
+            <p class="lead" data-i18n="welcome_desc">Explore languages and cultures from around the world.</p>
         </div>
     </header>
 
     <section class="langs" id="langs">
         <div class="container mt-5">
-            <h1 class="text-center mb-4">Languages</h1>
+            <h1 class="text-center mb-4" data-i18n="langs">Languages</h1>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 item1">
@@ -76,8 +95,8 @@
                             style="height: 200px; object-fit: cover;" title="English flag" loading="lazy"
                             data-license="By Original: த*உழவன்derivative work: Swarm (talk) - File:UK-US-CANADA-AUSTRALIA-NEW_ZEALAND_flags.gif, Public Domain, https://commons.wikimedia.org/w/index.php?curid=13624725">
                         <div class="card-body">
-                            <h5 class="card-title">English Language</h5>
-                            <p class="card-text">Explore the richness of the English language, its history, and its
+                            <h5 class="card-title" data-i18n="english">English Language</h5>
+                            <p class="card-text" data-i18n="en_desc">Explore the richness of the English language, its history, and its
                                 global influence. Learn about its grammar, vocabulary, and the nuances that make it
                                 unique.</p>
                             <a class="stretched-link" href="pages/EN_page.html"></a>
@@ -92,8 +111,8 @@
                             title="Spanish flag" loading="lazy"
                             data-license="By International Olympics Committee - The 2006 Winter Olympics flag manual, CC0, https://commons.wikimedia.org/w/index.php?curid=164050789">
                         <div class="card-body">
-                            <h5 class="card-title">Spanish Language</h5>
-                            <p class="card-text">Dive into the vibrant world of the Spanish language, spoken by millions
+                            <h5 class="card-title" data-i18n="spanish">Spanish Language</h5>
+                            <p class="card-text" data-i18n="es_desc">Dive into the vibrant world of the Spanish language, spoken by millions
                                 worldwide. Discover its cultural significance, diverse dialects, and the beauty of its
                                 literature.</p>
                             <a class="stretched-link" href="pages/ES_page.html"></a>
@@ -108,8 +127,8 @@
                             title="French flag" loading="lazy"
                             data-license="By Original: Unknown Vector: SKopp - This SVG flag includes elements that have been taken or adapted from this flag:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=60739584">
                         <div class="card-body">
-                            <h5 class="card-title">French Language</h5>
-                            <p class="card-text">Uncover the elegance of the French language, known for its art,
+                            <h5 class="card-title" data-i18n="french">French Language</h5>
+                            <p class="card-text" data-i18n="fr_desc">Uncover the elegance of the French language, known for its art,
                                 fashion,
                                 and cuisine. Learn about its grammar, pronunciation, and the cultural context that
                                 shapes
@@ -128,8 +147,8 @@
                             data-license="By Original: Lee Eung-jun, Park Young-ho, and others Vector: Great Brightstar and others - Ordinance Act of the Law concerning the National Flag of the Republic of Korea, Construction and color guidelines (Russian/English)File:Flag of South Korea (construction sheet).svg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343752">>
 
                         <div class="card-body">
-                            <h5 class="card-title">Korean Language</h5>
-                            <p class="card-text"> Explore the Korean language, known for its unique script and rich
+                            <h5 class="card-title" data-i18n="korean">Korean Language</h5>
+                            <p class="card-text" data-i18n="kr_desc"> Explore the Korean language, known for its unique script and rich
                                 cultural heritage. Learn about its grammar, pronunciation, and the influence of K-pop
                                 and Korean dramas on global culture.</p>
                             <a class="stretched-link" href="pages/KR_page.html"></a>
@@ -144,8 +163,8 @@
                             title="Chinese flag" loading="lazy"
                             data-license="By Zeng Liansong - Own work, National Flag Image for Online Usage, National People's Congress of PRC, per Article 9 of the National Flag Law of PRC., Public Domain, https://commons.wikimedia.org/w/index.php?curid=436175">
                         <div class="card-body">
-                            <h5 class="card-title">Mandarin Language</h5>
-                            <p class="card-text">Discover the complexities of the Mandarin language, the most spoken
+                            <h5 class="card-title" data-i18n="mandarin">Mandarin Language</h5>
+                            <p class="card-text" data-i18n="zh_desc">Discover the complexities of the Mandarin language, the most spoken
                                 language in the world. Learn about its tones, characters, and the cultural nuances that
                                 shape communication in Chinese society.</p>
                             <a class="stretched-link" href="pages/ZH_page.html"></a>
@@ -160,8 +179,8 @@
                             title="Hong Kong flag" loading="lazy"
                             data-license="By Designed by Tao HoSVG code of 24 November 2005 version copied from Open Clip ArtSVG code of 20 August 2011 version by AlkariSVG code of 6 September 2021 version by Mike Rohsopht - Own work by Mike Rohsopht based on File:GB16689-2004.pdf and Regional Flag and Regional Emblem Ordinance, Public Domain, https://commons.wikimedia.org/w/index.php?curid=44636780">
                         <div class="card-body">
-                            <h5 class="card-title">Cantonese Language</h5>
-                            <p class="card-text">Delve into the Cantonese language, known for its rich history and
+                            <h5 class="card-title" data-i18n="canto">Cantonese Language</h5>
+                            <p class="card-text" data-i18n="zh-yue_desc">Delve into the Cantonese language, known for its rich history and
                                 cultural significance in Hong Kong and southern China. Learn about its unique phonetics,
                                 vocabulary, and the role it plays in local identity.</p>
                             <a class="stretched-link" href="pages/ZH-Yue_page.html"></a>
@@ -176,8 +195,8 @@
                             title="Japanese flag" loading="lazy"
                             data-license="By Various - Law Concerning the National Flag and Anthem (1999) (Japanese) (English); Ministry of Defense Defense Specification Z 8701C (DSPZ8701C) (archived)Construction sheet:, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343621">
                         <div class="card-body">
-                            <h5 class="card-title">Japanese Language</h5>
-                            <p class="card-text"> Explore the Japanese language, known for its intricate writing systems
+                            <h5 class="card-title" data-i18n="japanese">Japanese Language</h5>
+                            <p class="card-text" data-i18n="jp_desc"> Explore the Japanese language, known for its intricate writing systems
                                 and cultural depth. Learn about its grammar, honorifics, and the influence of anime and
                                 manga on its global popularity.</p>
                             <a class="stretched-link" href="pages/JP_page.html"></a>
@@ -193,8 +212,8 @@
                             data-license="statute: Undang-Undang Republik Indonesia Nomor 24 Tahun 2009 tentang Bendera, Bahasa, dan Lambang Negara serta Lagu Kebangsaan (Law of the Republic of Indonesia Number 24 of 2009 on the Flag, Language, and Emblem of the State and the National Anthem) - Article 35, Public Domain, https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg">
 
                         <div class="card-body">
-                            <h5 class="card-title">Indonesian Language</h5>
-                            <p class="card-text">Discover the Indonesian language, a unifying force in the diverse
+                            <h5 class="card-title" data-i18n="indo">Indonesian Language</h5>
+                            <p class="card-text" data-i18n="id_desc">Discover the Indonesian language, a unifying force in the diverse
                                 archipelago of Indonesia.</p>
                             <a class="stretched-link" href="pages/ID_page.html"></a>
                         </div>
@@ -208,8 +227,8 @@
                             title="German flag" loading="lazy"
                             data-license="By User:SKopp, User:Madden, and other users - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=343071">
                         <div class="card-body">
-                            <h5 class="card-title">German Language</h5>
-                            <p class="card-text">Explore the German language, known for its precision and rich literary
+                            <h5 class="card-title" data-i18n="german">German Language</h5>
+                            <p class="card-text" data-i18n="de_desc">Explore the German language, known for its precision and rich literary
                                 tradition. Learn about its grammar, vocabulary, and the cultural context that shapes its
                                 use in Germany and beyond.</p>
                             <a class="stretched-link" href="pages/DE_page.html"></a>
@@ -224,7 +243,7 @@
                             title="Dutch flag" loading="lazy"
                             data-license="By Zscout370 - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=363168">
                         <div class="card-body">
-                            <h5 class="card-title">Dutch Language</h5>
+                            <h5 class="card-title" data-i18n="dutch">Dutch Language</h5>
                             <p class="card-text">Discover the Dutch language, spoken in the Netherlands and Belgium.
                                 Learn about its unique features, grammar, and the cultural context that influences its
                                 use in Dutch-speaking regions.</p>
@@ -309,6 +328,7 @@
         </div>
     </footer>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/language_changer.js"></script>
 </body>
 
 </html>
