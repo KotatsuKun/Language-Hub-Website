@@ -49,3 +49,18 @@ if (isSafariBrowser()) {
 
     }
 }
+
+//Acessibility
+
+document.addEventListener('DOMContentLoaded', function(){
+  const biggerFontBtn =  document.getElementById('BiggerFont');
+
+  let FontSize = 1
+
+  biggerFontBtn.addEventListener('click', function(){
+    FontSize += 0.1 ;
+    document.body.style.fontSize =  `${FontSize}rem`
+  })
+
+
+})
