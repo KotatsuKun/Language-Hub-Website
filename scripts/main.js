@@ -54,6 +54,7 @@ if (isSafariBrowser()) {
 
 document.addEventListener('DOMContentLoaded', function(){
   const biggerFontBtn =  document.getElementById('BiggerFont');
+  const smallerFontBtn =  document.getElementById('SmallerFont');
 
   let FontSize = 1
 
@@ -61,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function(){
     FontSize += 0.1 ;
     document.body.style.fontSize =  `${FontSize}rem`
   })
-
-
+  
+  smallerFontBtn.addEventListener('click', function(){
+    FontSize -= 0.1 ;
+    document.body.style.fontSize =  `${FontSize}rem`
+  })
 })
