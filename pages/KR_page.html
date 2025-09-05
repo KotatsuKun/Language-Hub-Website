@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-bg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name">Language Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,27 +34,27 @@
     <header class="text-white text-center py-5" style="background-color: #CD2E3A;">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/800px-Flag_of_South_Korea.svg.png" alt="Korean Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the Korean Language Page</h1>
-            <p class="lead">Discover the beauty and uniqueness of the Korean language.</p>
+            <h1 data-i18n="KRPAGE_welcome">Welcome to the Korean Language Page</h1>
+            <p class="lead" data-i18n="KRPAGE_desc">Discover the beauty and uniqueness of the Korean language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">Korean Language</h1>
-        <p class="lead text-center">Exploring the fascinating history and cultural significance of the Korean language.</p>
+        <h1 class="text-center" data-i18n="korean">Korean Language</h1>
+        <p class="lead text-center" data-i18n="KRPAGE_intro">Exploring the fascinating history and cultural significance of the Korean language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Hunminjeongeum.jpg/800px-Hunminjeongeum.jpg" alt="Hangul Creation" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of Korean</h5>
-                <p class="card-text">Korean has a unique history with the creation of Hangul in the 15th century by King Sejong the Great. This scientific writing system was designed to be easy to learn and represents the sounds of the Korean language perfectly.</p>
+                <h5 class="card-title" data-i18n="KRPAGE_history">History of Korean</h5>
+                <p class="card-text" data-i18n="KRPAGE_history_desc">Korean has a unique history with the creation of Hangul in the 15th century by King Sejong the Great. This scientific writing system was designed to be easy to learn and represents the sounds of the Korean language perfectly.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">Korean is the language of K-pop, K-dramas, and a rich cultural heritage that spans thousands of years. The Korean Wave (Hallyu) has made Korean culture and language popular worldwide.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="KRPAGE_cultural_desc">Korean is the language of K-pop, K-dramas, and a rich cultural heritage that spans thousands of years. The Korean Wave (Hallyu) has made Korean culture and language popular worldwide.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Seoul_skyline_at_sunset.jpg/1920px-Seoul_skyline_at_sunset.jpg" alt="Korean Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +62,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Korean_language_%28code_ko%29.png/800px-Korean_language_%28code_ko%29.png" alt="Learning Korean" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
-                <p class="card-text">While Korean grammar is quite different from English, Hangul is considered one of the most logical writing systems in the world. With consistent practice, learners can quickly become proficient in reading and writing.</p>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
+                <p class="card-text" data-i18n="KRPAGE_learning_desc">While Korean grammar is quite different from English, Hangul is considered one of the most logical writing systems in the world. With consistent practice, learners can quickly become proficient in reading and writing.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow Korean learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the vibrant culture of Korea.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text" data-i18n="KRPAGE_join_desc">Connect with fellow Korean learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the vibrant culture of Korea.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>

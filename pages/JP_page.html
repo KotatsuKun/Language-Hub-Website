@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name">Language Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,30 +31,30 @@
         </div>
     </nav>
 
-    <header class="bg-white text-dark text-center py-5">
+    <header class="bg-jp text-dark text-center py-5">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" alt="Japanese Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the Japanese Language Page</h1>
-            <p class="lead">Discover the beauty and complexity of the Japanese language.</p>
+            <h1 data-i18n="JPPAGE_welcome">Welcome to the Japanese Language Page</h1>
+            <p class="lead" data-i18n="JPPAGE_desc">Discover the beauty and complexity of the Japanese language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">Japanese Language</h1>
-        <p class="lead text-center">Exploring the unique history and cultural significance of the Japanese language.</p>
+        <h1 class="text-center" data-i18n="japanese">Japanese Language</h1>
+        <p class="lead text-center" data-i18n="JPPAGE_intro">Exploring the unique history and cultural significance of the Japanese language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Japanese_writing_system_kyokashotai.svg/800px-Japanese_writing_system_kyokashotai.svg.png" alt="Japanese Writing System" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of Japanese</h5>
-                <p class="card-text">Japanese has a unique history with influences from Chinese but no established genetic relationship to any other language. Its writing system combines kanji (Chinese characters) with two syllabic scripts: hiragana and katakana.</p>
+                <h5 class="card-title" data-i18n="JPPAGE_history">History of Japanese</h5>
+                <p class="card-text" data-i18n="JPPAGE_history_desc">Japanese has a unique history with influences from Chinese but no established genetic relationship to any other language. Its writing system combines kanji (Chinese characters) with two syllabic scripts: hiragana and katakana.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">Japanese is the language of haiku, anime, manga, and a rich cultural tradition that values precision and subtlety. It reflects the unique aesthetic sensibilities and social structures of Japanese society.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="JPPAGE_cultural_desc">Japanese is the language of haiku, anime, manga, and a rich cultural tradition that values precision and subtlety. It reflects the unique aesthetic sensibilities and social structures of Japanese society.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tokyo_skyline_from_Roppongi_Hills_Mori_Tower.jpg/1920px-Tokyo_skyline_from_Roppongi_Hills_Mori_Tower.jpg" alt="Japanese Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +62,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Japanese_language_%28code_ja%29.png/800px-Japanese_language_%28code_ja%29.png" alt="Learning Japanese" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
-                <p class="card-text">Japanese is considered challenging for English speakers due to its writing system and grammar structure. However, its pronunciation is relatively straightforward, and learners often find the cultural aspects rewarding.</p>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
+                <p class="card-text" data-i18n="JPPAGE_learning_desc">Japanese is considered challenging for English speakers due to its writing system and grammar structure. However, its pronunciation is relatively straightforward, and learners often find the cultural aspects rewarding.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow Japanese learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the fascinating culture of Japan.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text" data-i18n="JPPAGE_join_desc">Connect with fellow Japanese learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the fascinating culture of Japan.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>

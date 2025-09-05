@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name">Language Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,27 +34,27 @@
     <header class="bg-dark text-white text-center py-5">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.svg.png" alt="German Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the German Language Page</h1>
-            <p class="lead">Discover the precision and richness of the German language.</p>
+            <h1 data-i18n="DEPAGE_welcome">Welcome to the German Language Page</h1>
+            <p data-i18n="DEPAGE_desc" class="lead">Discover the precision and richness of the German language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">German Language</h1>
-        <p class="lead text-center">Exploring the history and cultural significance of the German language.</p>
+        <h1 class="text-center" data-i18n="german" >German Language</h1>
+        <p class="lead text-center" data-i18n="DEPAGE_intro">Exploring the history and cultural significance of the German language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Deutsche_Mundarten.png/1280px-Deutsche_Mundarten.png" alt="German Dialects" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of German</h5>
-                <p class="card-text">German belongs to the West Germanic branch of the Indo-European language family. It has evolved from Old High German through Middle High German to Modern German, with Martin Luther's Bible translation playing a key role in standardizing the language.</p>
+                <h5 class="card-title" data-i18n="DEPAGE_history">History of German</h5>
+                <p class="card-text" data-i18n="DEPAGE_history_desc">German belongs to the West Germanic branch of the Indo-European language family. It has evolved from Old High German through Middle High German to Modern German, with Martin Luther's Bible translation playing a key role in standardizing the language.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">German is the language of philosophers like Kant and Nietzsche, composers like Beethoven and Bach, and scientists like Einstein. It has a rich literary tradition and is a key language for academic and scientific publications.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="DEPAGE_cultural_desc">German is the language of philosophers like Kant and Nietzsche, composers like Beethoven and Bach, and scientists like Einstein. It has a rich literary tradition and is a key language for academic and scientific publications.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Berlin_Reichstag_Building_West.jpg/1920px-Berlin_Reichstag_Building_West.jpg" alt="German Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +62,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/German_language_%28code_de%29.png/800px-German_language_%28code_de%29.png" alt="Learning German" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
-                <p class="card-text">German is known for its complex grammar, including cases and gender, but its pronunciation is largely phonetic. Many English words have German origins, which can help learners recognize vocabulary.</p>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
+                <p class="card-text" data-i18n="DEPAGE_learning_desc">German is known for its complex grammar, including cases and gender, but its pronunciation is largely phonetic. Many English words have German origins, which can help learners recognize vocabulary.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow German learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the rich cultural heritage of German-speaking countries.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text"data-i18n="DEPAGE_join_desc">Connect with fellow German learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the rich cultural heritage of German-speaking countries.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>

@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-bg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name">Language Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,30 +31,30 @@
         </div>
     </nav>
 
-    <header class="bg-success text-white text-center py-5">
+    <header class="bg-spain text-white text-center py-5">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/800px-Flag_of_Spain.svg.png" alt="Spanish Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the Spanish Language Page</h1>
-            <p class="lead">Discover the beauty and richness of the Spanish language.</p>
+            <h1 data-i18n="ESPAGE_welcome">Welcome to the Spanish Language Page</h1>
+            <p class="lead" data-i18n="ESPAGE_desc">Discover the beauty and richness of the Spanish language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">Spanish Language</h1>
-        <p class="lead text-center">Exploring the vibrant history and cultural significance of the Spanish language.</p>
+        <h1 class="text-center" data-i18n="spanish">Spanish Language</h1>
+        <p class="lead text-center" data-i18n="ESPAGE_intro">Exploring the vibrant history and cultural significance of the Spanish language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Mapa_de_los_pa%C3%ADses_con_el_espa%C3%B1ol_como_idioma_oficial.png/1280px-Mapa_de_los_pa%C3%ADses_con_el_espa%C3%B1ol_como_idioma_oficial.png" alt="Spanish Speaking Countries" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of Spanish</h5>
-                <p class="card-text">Spanish evolved from Vulgar Latin in the Iberian Peninsula and has spread across the globe through colonization. Today, it's the official language of 20 countries and one of the most spoken languages worldwide.</p>
+                <h5 class="card-title" data-i18n="ESPAGE_history">History of Spanish</h5>
+                <p class="card-text" data-i18n="ESPAGE_history_desc">Spanish evolved from Vulgar Latin in the Iberian Peninsula and has spread across the globe through colonization. Today, it's the official language of 20 countries and one of the most spoken languages worldwide.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">Spanish is known for its rich literary tradition, from Cervantes to García Márquez. It's the language of flamenco, tango, and countless cultural expressions across Latin America and Spain.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="ESPAGE_cultural_desc">Spanish is known for its rich literary tradition, from Cervantes to García Márquez. It's the language of flamenco, tango, and countless cultural expressions across Latin America and Spain.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Antigua_Guatemala_10.jpg/1920px-Antigua_Guatemala_10.jpg" alt="Spanish Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +62,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Spanish_language_%28code_es%29.png/800px-Spanish_language_%28code_es%29.png" alt="Learning Spanish" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
-                <p class="card-text">Spanish is considered one of the easier languages for English speakers to learn. With its phonetic spelling and many cognates, learners can quickly build vocabulary and communicate effectively.</p>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
+                <p class="card-text"data-i18n="ESPAGE_learning_desc">Spanish is considered one of the easier languages for English speakers to learn. With its phonetic spelling and many cognates, learners can quickly build vocabulary and communicate effectively.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow Spanish learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the diverse cultures of the Spanish-speaking world.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text" data-i18n="ESPAGE_join_desc">Connect with fellow Spanish learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the diverse cultures of the Spanish-speaking world.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>

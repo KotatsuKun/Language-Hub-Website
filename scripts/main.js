@@ -1,4 +1,4 @@
-
+//dark mode toggle
 window.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const storedTheme = localStorage.getItem('theme') || 'light';
@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Enhanced Safari detection
+//Safari detection
 function isSafariBrowser() {
     // Check for Safari desktop and iOS
     const isSafari = /^((?!chrome|android|crios|fxios).)*safari/i.test(navigator.userAgent);

@@ -93,11 +93,30 @@
     background-color: #ba99d6 !important;
 }
 
+.bg-spain{
+    background-color: goldenrod;
+}
+
+.bg-cn{
+    background-color: rgb(189, 26, 26);
+}
+
+.bg-jp{
+    background-color: #dbdbdb;
+}
+
+.bg-nl{
+    background-color: #1e3a6e;
+}
+
 .language-bg{
     background-color: transparent;
     border: transparent;
 }
 
+.navbar-bg{
+    background-color: var(--k-custom-body-bg);
+}
 
 .icon-rotate {
     transform: rotate(-23deg);

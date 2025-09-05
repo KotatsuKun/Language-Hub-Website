@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-bg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name" ><p>Language Hub</p></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,27 +34,27 @@
     <header class="bg-primary text-white text-center py-5" style="background-color: #002395 !important;">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png" alt="French Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the French Language Page</h1>
-            <p class="lead">Discover the elegance and beauty of the French language.</p>
+            <h1 data-i18n="FRPAGE_welcome">Welcome to the French Language Page</h1>
+            <p data-i18n="FRPAGE_desc" class="lead">Discover the elegance and beauty of the French language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">French Language</h1>
-        <p class="lead text-center">Exploring the rich history and cultural significance of the French language.</p>
+        <h1 class="text-center" data-i18n="french">French Language</h1>
+        <p class="lead text-center" data-i18n="FRPAGE_intro">Exploring the rich history and cultural significance of the French language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Francophone_Africa.svg/1280px-Francophone_Africa.svg.png" alt="French Speaking Countries" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of French</h5>
-                <p class="card-text">French evolved from Vulgar Latin and was influenced by the Celtic languages of Northern Gaul. It became an international language of diplomacy and culture during the 17th and 18th centuries.</p>
+                <h5 class="card-title" data-i18n="FRPAGE_history">History of French</h5>
+                <p class="card-text" data-i18n="FRPAGE_history_desc">French evolved from Vulgar Latin and was influenced by the Celtic languages of Northern Gaul. It became an international language of diplomacy and culture during the 17th and 18th centuries.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">French is known as the language of love, diplomacy, and haute cuisine. It's the official language of international institutions and has a rich literary tradition from Victor Hugo to Albert Camus.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="FRPAGE_cultural_desc">French is known as the language of love, diplomacy, and haute cuisine. It's the official language of international institutions and has a rich literary tradition from Victor Hugo to Albert Camus.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_Night.jpg/1920px-Paris_Night.jpg" alt="French Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +62,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/French_language_%28code_fr%29.png/800px-French_language_%28code_fr%29.png" alt="Learning French" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
                 <p class="card-text">French is considered one of the most beautiful languages in the world. While its pronunciation can be challenging, its logical grammar structure makes it rewarding to learn.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow French learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the diverse cultures of the French-speaking world.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text" data-i18n="FRPAGE_join_desc">Connect with fellow French learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the diverse cultures of the French-speaking world.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>
