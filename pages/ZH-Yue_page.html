@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-bg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name">Language Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,27 +34,28 @@
     <header class="bg-cn text-white text-center py-5" >
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/800px-Flag_of_Hong_Kong.svg.png" alt="Cantonese Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the Cantonese Language Page</h1>
-            <p class="lead">Discover the richness and cultural significance of the Cantonese language.</p>
+             <p class="text-center floating-text" style="font-size: 5rem;">歡迎</p>
+            <h1 data-i18n="ZH-YUEPAGE_welcome">Welcome to the Cantonese Language Page</h1>
+            <p class="lead" data-i18n="ZH-YUEPAGE_desc">Discover the richness and cultural significance of the Cantonese language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">Cantonese Language</h1>
-        <p class="lead text-center">Exploring the unique history and cultural importance of the Cantonese language.</p>
+        <h1 class="text-center" data-i18n="canto">Cantonese Language</h1>
+        <p class="lead text-center" data-i18n="ZH-YUEPAGE_intro">Exploring the unique history and cultural importance of the Cantonese language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Yue_Chinese_in_China.svg/1280px-Yue_Chinese_in_China.svg.png" alt="Cantonese Speaking Regions" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of Cantonese</h5>
-                <p class="card-text">Cantonese originated from the Yue Chinese spoken in the Liangguang region of Southern China. It has preserved many features of Middle Chinese and has developed independently from Mandarin for centuries.</p>
+                <h5 class="card-title" data-i18n="ZH-YUEPAGE_history">History of Cantonese</h5>
+                <p class="card-text" data-i18n="ZH-YUEPAGE_history_desc">Cantonese originated from the Yue Chinese spoken in the Liangguang region of Southern China. It has preserved many features of Middle Chinese and has developed independently from Mandarin for centuries.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">Cantonese is the language of Hong Kong cinema, Cantopop, and a vibrant culinary tradition. It has played a crucial role in the Chinese diaspora, particularly in Southeast Asia and North America.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="ZH-YUEPAGE_cultural_desc">Cantonese is the language of Hong Kong cinema, Cantopop, and a vibrant culinary tradition. It has played a crucial role in the Chinese diaspora, particularly in Southeast Asia and North America.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hong_Kong_Night.jpg/1920px-Hong_Kong_Night.jpg" alt="Cantonese Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +63,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Jyutping_Chart.png/800px-Jyutping_Chart.png" alt="Learning Cantonese" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
-                <p class="card-text">Cantonese is known for its complex tone system (6-9 tones depending on the classification) and unique vocabulary. While challenging, learning Cantonese provides access to a rich cultural heritage and vibrant communities worldwide.</p>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
+                <p class="card-text" data-i18n="ZH-YUEPAGE_learning_desc">Cantonese is known for its complex tone system (6-9 tones depending on the classification) and unique vocabulary. While challenging, learning Cantonese provides access to a rich cultural heritage and vibrant communities worldwide.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow Cantonese learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the dynamic culture of Cantonese-speaking regions.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text" data-i18n="ZH-YUEPAGE_join_desc">Connect with fellow Cantonese learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the dynamic culture of Cantonese-speaking regions.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>

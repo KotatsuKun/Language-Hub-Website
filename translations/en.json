@@ -117,6 +117,24 @@
     "RUPAGE_learning_desc": "Russian is known for its complex grammar, including six cases and aspects of verbs. The Cyrillic alphabet, while initially challenging, is phonetic and can be learned relatively quickly. Many learners find the language's logical structure rewarding.",
     "RUPAGE_join_desc": "Connect with fellow Russian learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the rich cultural heritage of the Russian-speaking world.",
 
+    "VIPAGE_welcome": "Welcome to the Vietnamese Language Page",
+    "VIPAGE_desc": "Discover the tones and beauty of the Vietnamese language.",
+    "VIPAGE_intro": "Exploring the unique history and cultural significance of the Vietnamese language.",
+    "VIPAGE_history": "History of Vietnamese",
+    "VIPAGE_history_desc": "Vietnamese is an Austroasiatic language with a rich history influenced by Chinese, French, and other languages. The modern Vietnamese writing system, Quốc Ngữ, uses the Latin alphabet and was developed by Portuguese missionaries in the 17th century.",
+    "VIPAGE_cultural_desc": "Vietnamese is the language of a rich literary tradition, from ancient poetry to modern novels. It reflects the country's history, culture, and values, and is central to Vietnamese identity.",
+    "VIPAGE_learning_desc": "Vietnamese is a tonal language, which can be challenging for learners. However, its grammar is relatively simple, with no verb conjugations or noun declensions. With practice, learners can quickly become proficient in speaking and understanding Vietnamese.",
+    "VIPAGE_join_desc": "Connect with fellow Vietnamese learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the vibrant culture of Vietnam.",
+
+    "ZHPAGE_welcome": "Welcome to the Mandarin Language Page",
+    "ZHPAGE_desc": "Discover the complexities of the Mandarin language, the most spoken language in the world.",
+    "ZHPAGE_intro": "Exploring the rich history and cultural significance of the Mandarin language.",
+    "ZHPAGE_history": "History of Mandarin",
+    "ZHPAGE_history_desc": "Mandarin Chinese has a history spanning over 3,000 years. It evolved from Old Chinese and became the official language of China during the Ming and Qing dynasties. The standardized form is based on the Beijing dialect.",
+    "ZHPAGE_cultural_desc": "Mandarin is the most spoken language in the world and serves as a key to understanding one of the world's oldest continuous civilizations. It's the language of Confucius, Laozi, and a rich literary tradition.",
+    "ZHPAGE_learning_desc": "While Mandarin is considered challenging for English speakers due to its tonal nature and character system, its grammar is relatively simple. With dedication, learners can achieve proficiency and access a rich cultural world.",
+    "ZHPAGE_join_desc": "Connect with fellow Mandarin learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the fascinating culture of China and the Chinese-speaking world.",
+
     
 
     "language_name": "English"

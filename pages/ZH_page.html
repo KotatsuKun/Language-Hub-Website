@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-bg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#" >Language Hub</a>
+            <a class="navbar-brand" href="#" data-i18n="Logo_name">Language Hub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,27 +34,28 @@
     <header class="bg-cn text-white text-center py-5">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/800px-Flag_of_the_People%27s_Republic_of_China.svg.png" alt="Mandarin Language Logo" class="mb-4 img-fluid" style="width: 500px; height: auto;">
-            <h1>Welcome to the Mandarin Language Page</h1>
-            <p class="lead">Discover the complexity and beauty of the Mandarin language.</p>
+             <p class="text-center floating-text" style="font-size: 5rem;">欢迎</p>
+            <h1 data-i18n="ZHPAGE_welcome">Welcome to the Mandarin Language Page</h1>
+            <p class="lead" data-i18n="ZHPAGE_desc">Discover the complexity and beauty of the Mandarin language.</p>
         </div>
     </header>
 
     <section class="container mt-5">
-        <h1 class="text-center">Mandarin Language</h1>
-        <p class="lead text-center">Exploring the rich history and cultural significance of the Mandarin language.</p>
+        <h1 class="text-center" data-i18n="mandarin">Mandarin Language</h1>
+        <p class="lead text-center" data-i18n="ZHPAGE_intro">Exploring the rich history and cultural significance of the Mandarin language.</p>
        
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chinese_characters_%28Hanzi%29_in_Kaishu_style.png/800px-Chinese_characters_%28Hanzi%29_in_Kaishu_style.png" alt="Chinese Characters" class="img-fluid" style="width: 200px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">History of Mandarin</h5>
-                <p class="card-text">Mandarin Chinese has a history spanning over 3,000 years. It evolved from Old Chinese and became the official language of China during the Ming and Qing dynasties. The standardized form is based on the Beijing dialect.</p>
+                <h5 class="card-title" data-i18n="ZHPAGE_history">History of Mandarin</h5>
+                <p class="card-text" data-i18n="ZHPAGE_history_desc">Mandarin Chinese has a history spanning over 3,000 years. It evolved from Old Chinese and became the official language of China during the Ming and Qing dynasties. The standardized form is based on the Beijing dialect.</p>
             </div>
         </div>
 
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Cultural Significance</h5>
-                <p class="card-text">Mandarin is the most spoken language in the world and serves as a key to understanding one of the world's oldest continuous civilizations. It's the language of Confucius, Laozi, and a rich literary tradition.</p>
+                <h5 class="card-title" data-i18n="Cultural">Cultural Significance</h5>
+                <p class="card-text" data-i18n="ZHPAGE_cultural_desc">Mandarin is the most spoken language in the world and serves as a key to understanding one of the world's oldest continuous civilizations. It's the language of Confucius, Laozi, and a rich literary tradition.</p>
             </div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Forbidden_City_in_Beijing.jpg/1920px-Forbidden_City_in_Beijing.jpg" alt="Chinese Culture" class="img-fluid" style="width: 400px; height: auto;">
         </div>
@@ -62,23 +63,24 @@
         <div class="card mb-3 d-flex flex-row align-items-center">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Chinese_language_%28code_zh%29.png/800px-Chinese_language_%28code_zh%29.png" alt="Learning Mandarin" class="img-fluid" style="width: 400px; height: auto;">
             <div class="card-body">
-                <h5 class="card-title">Learning Resources</h5>
-                <p class="card-text">While Mandarin is considered challenging for English speakers due to its tonal nature and character system, its grammar is relatively simple. With dedication, learners can achieve proficiency and access a rich cultural world.</p>
+                <h5 class="card-title" data-i18n="learning">Learning Resources</h5>
+                <p class="card-text" data-i18n="ZHPAGE_learning_desc">While Mandarin is considered challenging for English speakers due to its tonal nature and character system, its grammar is relatively simple. With dedication, learners can achieve proficiency and access a rich cultural world.</p>
             </div>
         </div>
         <div class="card mb-3 d-flex flex-row align-items-center">
             <div class="card-body">
-                <h5 class="card-title">Join the Community</h5>
-                <p class="card-text">Connect with fellow Mandarin learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the fascinating culture of China and the Chinese-speaking world.</p>
+                <h5 class="card-title" data-i18n="join">Join the Community</h5>
+                <p class="card-text" data-i18n="ZHPAGE_join_desc">Connect with fellow Mandarin learners and speakers! Join our forums, participate in language exchanges, and immerse yourself in the fascinating culture of China and the Chinese-speaking world.</p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="container text-center py-4">
-            <p class="text-muted">&copy; 2025 Language Hub. All rights reserved.</p>
+            <p class="text-muted" data-i18n="rights"> 2025 Language Hub. All rights reserved.</p>
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/language_changer.js"></script>
 </body>
 </html>
