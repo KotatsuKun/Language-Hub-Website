@@ -2,6 +2,8 @@ const path = require('path');
 
 module.exports = {
     entry: './3DWebGL.ts',
+    mode: 'development',
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
