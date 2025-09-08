@@ -2,81 +2,110 @@ main();
 
 function main() {
   
-    init();
-
-}
-
-// Set clear color to black, fully opaque
-gl.clearColor(0.0, 0.0, 0.0, 1.0);
-// Clear the color buffer with specified clear color
-gl.clear(gl.COLOR_BUFFER_BIT);
-
-
-async function init() {
-    try {
-        // Load shaders
-        await shaderLoader.loadMultipleShaders(['basic', 'effects', 'postProcessing']);
-
-        const canvas = document.querySelector("#gl-canvas");
-        // Initialize the GL context
-        const gl = canvas.getContext("webgl");
-
-        // Only continue if WebGL is available and working
-        if (gl === null) {
-            alert(
-                "Unable to initialize WebGL. Your browser or machine may not support it.",
-            );
-            return;
-        }
-
-        // Initialize shader program using loaded shaders
-        const basicShader = shaderLoader.getShader('basic');
-        const shaderProgram = shaderLoader.initShaderProgram(
-            gl,
-            basicShader.vertex,
-            basicShader.fragment
-        );
-
-        // Continue with your WebGL setup...
-        const programInfo = {
-            program: shaderProgram,
-            attribLocations: {
-                vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-                // ... other attributes
-            },
-            uniformLocations: {
-                // ... uniform locations
-            },
-        };
-
-        // Initialize buffers and start rendering...
-        initBuffers(gl);
-        drawScene(gl, programInfo);
-
-    } catch (error) {
-        console.error('Failed to initialize WebGL:', error);
+    const canvas = document.querySelector("#gl-canvas");
+    const gl = canvas.getContext("webgl2");
+    
+    if (!gl) {
+        alert("Unable to initialize WebGL. Your browser or machine may not support it.");
+        return;
     }
+
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
+    gl.clearDepth(1.0);
+    gl.enable(gl.DEPTH_TEST);           // Enable depth testing
+    gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+    
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+    const triangleVertices = [
+        //top middle
+        0.0, 0.5,
+        //bottom left
+        -0.5, -0.5,
+        //bottom right
+        0.5, -0.5
+    ];
+
+    const triangleVerticesCPUBuffer = new Float32Array(triangleVertices);
+
+    const triangleVertexBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, triangleVerticesCPUBuffer, gl.STATIC_DRAW);
+
+    const vertexShaderSource = `#version 300 es
+    precision mediump float;
+    
+    in vec2 vertPosition;
+
+    void main() {
+        gl_Position = vec4(vertPosition, 0.0, 1.0);
+    }`;
+
+    //verify errors in shader compilation
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vertexShader, vertexShaderSource);
+    gl.compileShader(vertexShader);
+    if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+        console.error('Error compiling vertex shader:', gl.getShaderInfoLog(vertexShader));
+        return;
+    }
+
+    const fragmentShaderSource = `#version 300 es
+    precision mediump float;
+
+    out vec4 FragColor;
+
+    void main() {
+        FragColor = vec4(1.0, 0.0, 0.0, 1.0); // Red color
+    }`;
+
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fragmentShader, fragmentShaderSource);
+    gl.compileShader(fragmentShader);
+    if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+        console.error('Error compiling fragment shader:', gl.getShaderInfoLog(fragmentShader));
+        return;
+    }
+
+    const triangleShaderProgram = gl.createProgram();
+    gl.attachShader(triangleShaderProgram, vertexShader);
+    gl.attachShader(triangleShaderProgram, fragmentShader);
+    gl.linkProgram(triangleShaderProgram);
+    if (!gl.getProgramParameter(triangleShaderProgram, gl.LINK_STATUS)) {
+        console.error('Error linking shader program:', gl.getProgramInfoLog(triangleShaderProgram));
+        return;
+    }
+
+    const vertexPostionLocation = gl.getAttribLocation(triangleShaderProgram, 'vertPosition');
+    if (vertexPostionLocation < 0) {
+        console.error('Error getting attribute location for vertPosition');
+        return;
+    }
+
+    //output merger 
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    //rasterization
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    //set gpu program (vertex + fragment shader)
+    gl.useProgram(triangleShaderProgram);
+    gl.enableVertexAttribArray(vertexPostionLocation);
+    //input assembler
+    gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBuffer);
+    gl.vertexAttribPointer(
+        /* index= */ vertexPostionLocation,
+        /* size= */ 2, // x and y
+        /* type= */ gl.FLOAT,
+        /* normalized= */ false,
+        /* stride= */ 2 * Float32Array.BYTES_PER_ELEMENT, // 2 floats per vertex
+        /* offset= */ 0
+    );
+
+    //draw call
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
 }
 
-// Call init when the page loads
-window.addEventListener('load', init);
 
-const positions = [
-  // Front face
-  -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
 
-  // Back face
-  -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
-
-  // Top face
-  -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
-
-  // Bottom face
-  -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
-
-  // Right face
-  1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
-
-  // Left face
-  -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
-];
