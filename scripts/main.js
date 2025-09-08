@@ -68,3 +68,52 @@ document.addEventListener('DOMContentLoaded', function(){
     document.body.style.fontSize =  `${FontSize}rem`
   })
 })
+
+
+// Keyboard shortcuts
+function createKeyComboListener(combinations) {
+    let pressedKeys = new Set();
+    
+    function handleKeyDown(event) {
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            return; // Don't trigger in input fields
+        }
+        
+        pressedKeys.add(event.key.toLowerCase());
+        
+        if (event.ctrlKey) pressedKeys.add('control');
+        if (event.shiftKey) pressedKeys.add('shift');
+        if (event.altKey) pressedKeys.add('alt');
+        
+        const currentCombo = Array.from(pressedKeys).sort().join('+');
+        
+        if (combinations[currentCombo]) {
+            window.location.href = combinations[currentCombo];
+            pressedKeys.clear();
+            event.preventDefault();
+        }
+    }
+    
+    function handleKeyUp(event) {
+        pressedKeys.delete(event.key.toLowerCase());
+        pressedKeys.delete('control');
+        pressedKeys.delete('shift');
+        pressedKeys.delete('alt');
+    }
+    
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+    
+    // Return cleanup function
+    return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('keyup', handleKeyUp);
+    };
+}
+
+// Usage
+const cleanup = createKeyComboListener({
+    'alt+w': 'pages/WebGL.html', 
+});
+
+// Call cleanup() when you want to remove the listeners
