@@ -5,7 +5,7 @@ let isTranslating = false;
 // Get the correct base path for translations
 function getBasePath() {
     // Use root-relative path to avoid issues with subdirectories
-    return 'Language-Hub-Website/tree/main/translations/';
+    return 'translations/';
     
     // If your site is in a subfolder like GitHub Pages, use:
     // return '/your-repo-name/translations/';
