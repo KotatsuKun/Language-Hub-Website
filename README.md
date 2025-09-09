@@ -7,6 +7,8 @@ Website about languages
 Implementation of accessibility tools and principles
 
 *shhh, there's some secret thing other than just basic HTML, CSS and JavaScript...*
+> [!NOTE]
+> WebGL renderer under development!
 
 ## Tecnologies used
 
