@@ -2,16 +2,32 @@
 let translations = {};
 let isTranslating = false;
 
-// Get the correct base path for translations
+// Get the correct base path for translations for GitHub Pages
 function getBasePath() {
-    // Use root-relative path to avoid issues with subdirectories
-    return 'translations/';
+    // Get the current URL path
+    const currentPath = window.location.pathname;
     
-    // If your site is in a subfolder like GitHub Pages, use:
-    // return '/your-repo-name/translations/';
+    // Check if we're on GitHub Pages (URL contains repository name)
+    const isGitHubPages = currentPath.split('/').length > 2;
+    
+    if (isGitHubPages) {
+        // Extract repository name from URL path
+        const pathParts = currentPath.split('/');
+        const repoName = pathParts[1]; // Second part is usually the repo name
+        
+        if (repoName && repoName !== '') {
+            return `/${repoName}/translations/`;
+        }
+    }
+    
+    // Default path for local development or root domain
+    return '/translations/';
 }
 
 const BASE_PATH = getBasePath();
+
+// Debug: Log the base path to help with troubleshooting
+console.log('Translation base path:', BASE_PATH);
 
 // Initialize language when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -71,8 +87,21 @@ async function changeLanguage(lang) {
         // Only load if not cached
         if (!translations[lang]) {
             const response = await fetch(`${BASE_PATH}${lang}.json`);
-            if (!response.ok) throw new Error(`Translation not found for ${lang}`);
-            translations[lang] = await response.json();
+            if (!response.ok) {
+                // If translation file not found, try fallback path
+                if (BASE_PATH.startsWith('/')) {
+                    const fallbackResponse = await fetch(`translations/${lang}.json`);
+                    if (fallbackResponse.ok) {
+                        translations[lang] = await fallbackResponse.json();
+                    } else {
+                        throw new Error(`Translation not found for ${lang}`);
+                    }
+                } else {
+                    throw new Error(`Translation not found for ${lang}`);
+                }
+            } else {
+                translations[lang] = await response.json();
+            }
         }
         
         // Apply translations
@@ -194,5 +223,6 @@ window.addEventListener('storage', function(e) {
 window.i18n = {
     changeLanguage,
     getCurrentLang: () => localStorage.getItem('siteLanguage'),
-    getTranslations: () => translations
+    getTranslations: () => translations,
+    getBasePath: () => BASE_PATH
 };
