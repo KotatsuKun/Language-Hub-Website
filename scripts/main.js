@@ -135,6 +135,13 @@ function createKeyComboListener(combinations) {
 const cleanup = createKeyComboListener({
     'alt+w': 'pages/WebGL.html', 
 });
-
 // Call cleanup() when you want to remove the listeners
 
+ScrollReveal().reveal('#navbar', { delay: 200});
+ScrollReveal().reveal('.welcome-index', { delay: 350, reset: true });
+ScrollReveal().reveal('#langs', { delay: 350, reset: true });
+ScrollReveal().reveal('#about', { delay: 400, reset: true });
+ScrollReveal().reveal('#contact', { delay: 450, reset: true });
+ScrollReveal().reveal('.card', { delay: 500, reset: true });
+
+    
