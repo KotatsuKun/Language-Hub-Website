@@ -19,7 +19,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top navbar-bg" >
+    <nav class="navbar navbar-expand-lg sticky-top navbar-bg">
         <div class="container-fluid">
 
             <a class="navbar-brand text-center">
@@ -43,32 +43,34 @@
                     <li class="nav-item nav-link">
                         <div class="form-switch">
                             <input class="form-check-input" type="checkbox" id="darkModeToggle">
-                            <label class="form-check-label nav-item" for="darkModeToggle" data-i18n="dark_mode">Dark Mode</label>
+                            <label class="form-check-label nav-item" for="darkModeToggle" data-i18n="dark_mode">Dark
+                                Mode</label>
                         </div>
                     </li>
 
                     <li class="nav-item nav-link">
 
                         <div class="dropdown nav-item">
-                            <button class="language-bg dropdown-toggle hover-item nav-item" type="button" id="languageDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="language-bg dropdown-toggle hover-item nav-item" type="button"
+                                id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-translate me-1"></i>
-                                <span id="currentLanguage">English</span>
+                                <span id="currentLanguage" class="nav-link">English</span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                                <li><a class="dropdown-item language-option" href="#" data-lang="en">English</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="pt-br">Português</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="fr">Français</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="es">Español</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="nl">Nederlands</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="de">Deutsch</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="ru">Русский</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="id">Indonesia</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="jp">日本語</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="zh">普通话</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="kr">한국어</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="yue-zh">粤语/廣東話</a></li>
-                                <li><a class="dropdown-item language-option" href="#" data-lang="vi">Tiếng Việt</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="en">English</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="pt-br">Português</a>
+                                </li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="fr">Français</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="es">Español</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="nl">Nederlands</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="de">Deutsch</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="ru">Русский</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="id">Indonesia</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="jp">日本語</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="zh">普通话</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="kr">한국어</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="yue-zh">粤语/廣東話</a></li>
+                                <li><a class="dropdown-item language-option nav-link" href="#" data-lang="vi">Tiếng Việt</a></li>
                             </ul>
                         </div>
                     </li>
@@ -87,9 +89,20 @@
                     </li>
                 </ul>
 
-                <div id="acessibility" class="nav-item nav-link">
-                    <button id="BiggerFont" class="btn btn-primary fw-bold">A+</button>
-                    <button id="SmallerFont" class="btn btn-primary fw-bold">A-</button>
+                <div id="acessibility" class="nav-item nav-link acessibility-menu" style="margin-top: 50px;">
+                    <button id="acessibility-btn" class="btn btn-primary fw-bold lateral-btn" aria-expanded="false">Acessibility</button>
+
+                    <div id="acessibility-opt" class="acessibility-options show-list">
+                        <button id="BiggerFont" class="btn btn-primary fw-bold" aria-label="Augment the font of the website">A+</button>
+                        <button id="SmallerFont" class="btn btn-primary fw-bold" aria-label="Shrink the font of the website">A-</button>
+                        <button id="high-contrast" class="btn btn-primary fw-bold"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shadows" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8 7a.5.5 0 0 1 0-1h3.5q.048 0 .093.009A7 7 0 0 0 12.9 13H8a.5.5 0 0 1 0-1h5.745q.331-.474.581-1H8a.5.5 0 0 1 0-1h6.71a7 7 0 0 0 .22-1H8a.5.5 0 0 1 0-1h7q0-.51-.07-1H8a.5.5 0 0 1 0-1h6.71a7 7 0 0 0-.384-1H8a.5.5 0 0 1 0-1h5.745a7 7 0 0 0-.846-1H8a.5.5 0 0 1 0-1h3.608A7 7 0 1 0 8 15" />
+                            </svg></button>
+                    </div>
+
                 </div>
             </div>
         </div>

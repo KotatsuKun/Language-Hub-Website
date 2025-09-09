@@ -12,6 +12,10 @@
     --bs-primary: #51BDAD;
     --bs-secondary: #25AD68;
 
+    --high-contrast-bg: #000000;
+    --high-contrast-text: #FFFFFF;
+    --high-contrast-links: #FFFF00;
+
     /*buttons*/
 
     /*links*/
@@ -58,25 +62,25 @@
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .alumni-sans-pinstripe-regular-italic {
+}
+
+.alumni-sans-pinstripe-regular-italic {
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 400;
     font-style: italic;
-  }
-  
-  .cabin-sketch-regular {
+}
+
+.cabin-sketch-regular {
     font-family: "Cabin Sketch", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .cabin-sketch-bold {
+}
+
+.cabin-sketch-bold {
     font-family: "Cabin Sketch", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
+}
 
 
 .btn-primary {
@@ -89,32 +93,42 @@
     transition: transform 0.3s ease;
 }
 
+.acessibility-menu {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+
+}
+
+
+
 .bg-secondary {
     background-color: #ba99d6 !important;
 }
 
-.bg-spain{
+.bg-spain {
     background-color: goldenrod;
 }
 
-.bg-cn{
+.bg-cn {
     background-color: rgb(189, 26, 26);
 }
 
-.bg-jp{
+.bg-jp {
     background-color: #dbdbdb;
 }
 
-.bg-nl{
+.bg-nl {
     background-color: #1e3a6e;
 }
 
-.language-bg{
+.language-bg {
     background-color: transparent;
     border: transparent;
 }
 
-.navbar-bg{
+.navbar-bg {
     background-color: var(--k-custom-body-bg);
 }
 
@@ -122,16 +136,38 @@
     transform: rotate(-23deg);
 }
 
-.box-shadow{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);;
+.lateral-btn {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+
 }
 
-.rotate-20:hover{
+.acessibility-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.acessibility-options button {
+    margin-bottom: 5px;
+
+}
+
+.show-list {
+    display: none;
+}
+
+.box-shadow {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+.rotate-20:hover {
     transition: transform 0.5s ease;
     transform: rotate(15deg);
 }
 
-.button-hover:hover{
+.button-hover:hover {
     transform: scale(1.03) rotate(15deg);
     transition: transform 0.5s ease-in-out;
 }
@@ -141,11 +177,18 @@
 /* animation */
 .floating-text {
     animation: floating 3s ease-in-out infinite;
-  }
-  
-  @keyframes floating {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Add hover effect for Bootstrap cards */
@@ -153,14 +196,15 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.item1:hover, .item1:focus-within {
+.item1:hover,
+.item1:focus-within {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15), 0 1.5px 4px rgba(0,0,0,0.10);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 1.5px 4px rgba(0, 0, 0, 0.10);
     z-index: 2;
 
 }
 
-.en_card_bg{
+.en_card_bg {
     background: url(https://upload.wikimedia.org/wikipedia/commons/d/de/UK-US-CANADA-AUSTRALIA-NEW_ZEALAND_flags-fast.gif);
 }
 
@@ -196,4 +240,29 @@
     background-color: #2c3034;
     border-color: #495057;
     color: #f8f9fa;
+}
+
+/* High Contrast */
+
+.high-contrast {
+    background-color: var(--high-contrast-bg) !important;
+    color: var(--high-contrast-text) !important;
+}
+
+.high-contrast header,
+.high-contrast footer,
+.high-contrast .formulary{
+    background-color: var(--high-contrast-bg) !important;
+    color: var(--high-contrast-text) !important;
+}
+.high-contrast .nav-link{
+    color: var(--high-contrast-links) !important;
+}
+
+.high-contrast .start-btn,
+.high-contrast .formulary button,
+.high-contrast .btn-primary{
+    background-color: var(--high-contrast-links) !important;
+    color: var(--high-contrast-bg) !important;
+    border: 2px solid var(--high-contrast-text) !important;
 }

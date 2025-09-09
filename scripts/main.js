@@ -53,20 +53,40 @@ if (isSafariBrowser()) {
 //Acessibility
 
 document.addEventListener('DOMContentLoaded', function(){
+  const acessibilityBtn = document.getElementById('acessibility-btn');
+  const acessibilityOpt = document.getElementById('acessibility-opt');
   const biggerFontBtn =  document.getElementById('BiggerFont');
   const smallerFontBtn =  document.getElementById('SmallerFont');
 
+  const highConstrast = document.getElementById('high-contrast');
+
+ 
+
   let FontSize = 1
+
+
+  acessibilityBtn.addEventListener('click', function(){
+    acessibilityBtn.classList.toggle('lateral-btn');
+    acessibilityOpt.classList.toggle('show-list');
+
+    const selectedButton = acessibilityBtn.getAttribute('aria-expanded') === 'true';
+    acessibilityBtn.setAttribute('aria-expanded', !selectedButton)
+
+  });
 
   biggerFontBtn.addEventListener('click', function(){
     FontSize += 0.1 ;
     document.body.style.fontSize =  `${FontSize}rem`
-  })
+  });
   
   smallerFontBtn.addEventListener('click', function(){
     FontSize -= 0.1 ;
     document.body.style.fontSize =  `${FontSize}rem`
-  })
+  });
+
+  highConstrast.addEventListener('click', function(){
+    document.body.classList.toggle('high-contrast');
+  });
 })
 
 
@@ -117,3 +137,4 @@ const cleanup = createKeyComboListener({
 });
 
 // Call cleanup() when you want to remove the listeners
+
